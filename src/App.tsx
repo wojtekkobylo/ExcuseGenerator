@@ -77,7 +77,7 @@ function App() {
           Poziom kreatywności:
           <select
               name="kreatywnosc"
-              value={formData.imie}
+              value={formData.kreatywnosc}
               onChange={handleChange}
           >
             <option value="">-- Wybierz --</option>
