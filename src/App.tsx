@@ -1,41 +1,36 @@
 
 
-import Form from "./Form.tsx";
+import ExcuseForm from "./Form.tsx";
 import {useState} from "react";
-import ListaWymowek from "./ListaWymowek.tsx";
-
-
+import ExcuseList from "./ListaWymowek.tsx";
 
 function App() {
-
-
-
-    const [listaWym, setListaWym] = useState<Array<string>>(() => {
-        const savedExcuses = localStorage.getItem("wymowki");
+    const [excusesList, setExcusesList] = useState<Array<string>>(() => {
+        const savedExcuses = localStorage.getItem("excuses");
         return savedExcuses ? JSON.parse(savedExcuses) : [];
     });
 
-
-    function onButtonClick2(msg:string) {
-        const updatedList=([...listaWym, msg]);
-        setListaWym(updatedList);
-        localStorage.setItem("wymowki", JSON.stringify(updatedList));
+    function handleNewExcuse(excuse: string) {
+        const updatedList = [...excusesList, excuse];
+        setExcusesList(updatedList);
+        localStorage.setItem("excuses", JSON.stringify(updatedList));
     }
 
-
-    function clearExcuses() {
-        setListaWym([]);
-        localStorage.removeItem("wymowki");
+    function clearAllExcuses() {
+        setExcusesList([]);
+        localStorage.removeItem("excuses");
     }
-
 
     return (
         <>
-            <Form onButtonClick={onButtonClick2}/>
-            <ListaWymowek listaWymowek={listaWym}/>
-            <button onClick={clearExcuses}>Wyczysc Wymowki</button>
+            <ExcuseForm onButtonClick={handleNewExcuse}/>
+            <div style={{ color: 'black' }}>
+                <ExcuseList excusesList={excusesList}/>
+            </div>
+
+            <button onClick={clearAllExcuses}>Clear All Excuses</button>
         </>
     )
 }
 
-export default App
+export default App;

@@ -1,4 +1,3 @@
-
 body {
     margin: 0;
     padding: 0;
@@ -6,35 +5,32 @@ body {
     justify-content: center;
     align-items: start;
     min-height: 100vh;
-    background-color: #eef2f5;
+    background-color: #f3f5f8;
 }
 
-
-.excuse-container {
+.form-container {
     max-width: 600px;
     width: 100%;
     margin: 40px auto;
     padding: 20px;
-    background-color: #f9f9f9;
-    border: 2px solid #ccc;
+    background-color: #ffffff;
+    border: 2px solid #ddd;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     font-family: Arial, sans-serif;
 }
 
-
-
-.excuse-container h2 {
+.form-container h2 {
     text-align: center;
     margin-bottom: 20px;
     color: #333;
 }
 
-.excuse-container input,
-.excuse-container select,
-.excuse-container textarea {
+.form-container input,
+.form-container select,
+.form-container textarea {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     margin-bottom: 15px;
     border-radius: 6px;
     border: 1px solid #bbb;
@@ -42,31 +38,31 @@ body {
     font-size: 14px;
 }
 
-.excuse-container label {
+.form-container label {
     display: block;
     margin-bottom: 8px;
     font-weight: bold;
     color: #444;
 }
 
-.excuse-container input[type="range"] {
+.form-container input[type="range"] {
     width: 100%;
 }
 
-.excuse-container textarea {
+.form-container textarea {
     resize: vertical;
 }
 
-.excuse-container .checkbox-label {
+.form-container .checkbox-container {
     display: flex;
     align-items: center;
     gap: 10px;
     margin-bottom: 15px;
 }
 
-.excuse-container button {
+.form-container button {
     padding: 12px 20px;
-    background-color: #0077ff;
+    background-color: #4CAF50;
     color: white;
     font-weight: bold;
     border: none;
@@ -75,6 +71,6 @@ body {
     transition: background-color 0.2s ease-in-out;
 }
 
-.excuse-container button:hover {
-    background-color: #005dd1;
+.form-container button:hover {
+    background-color: #45a049;
 }

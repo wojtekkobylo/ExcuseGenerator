@@ -1,20 +1,20 @@
 import React from 'react';
 
-interface PropsExcuseList {
-    listaWymowek: Array<string>;
+interface ListProps {
+    excusesList: Array<string>;
 }
 
-const ListaWymowek: React.FC<PropsExcuseList> = ({ listaWymowek }) => {
+const ExcuseList: React.FC<ListProps> = ({ excusesList }) => {
     return (
         <div>
-            <h3>Wymówki:</h3>
+            <h3>Excuses:</h3>
             <ul>
-                {listaWymowek.map((wymowka, index) => (
-                    <li key={index}>{wymowka}</li>
+                {excusesList.map((excuse, index) => (
+                    <li key={index}>{excuse}</li>
                 ))}
             </ul>
         </div>
     );
 };
 
-export default ListaWymowek;
+export default ExcuseList;
